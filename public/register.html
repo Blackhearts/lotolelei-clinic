@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Patient - Lotolelei Clinic</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts/supabase.js" defer></script>
+    <script src="/scripts/patients.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Register New Patient</h1>
+            <p>Add new patients to the clinic's database</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <div id="error-message" class="error" style="display: none;"></div>
+            <div id="success-message" class="success" style="display: none;"></div>
+            
+            <form id="patient-form">
+                <div class="form-group">
+                    <label for="patient-id">Patient ID (PN followed by 4 digits)</label>
+                    <input type="text" id="patient-id" pattern="PN\d{4}" required placeholder="PN0001">
+                </div>
+                
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="">Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date-of-birth">Date of Birth</label>
+                    <input type="date" id="date-of-birth" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" required>
+                </div>
+                
+                <button type="submit">Register Patient</button>
+            </form>
+            
+            <div style="margin-top: 20px;">
+                <a href="/index.html" class="menu-item">Back to Main Menu</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>School of Information System | Diploma in Information Technology Level 6</p>
+            <p>IS6423 Software Development Methods - Assignment 1</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Consultation - Lotolelei Clinic</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts/supabase.js" defer></script>
+    <script src="/scripts/patients.js" defer></script>
+    <script src="/scripts/consultations.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Record Consultation</h1>
+            <p>Document patient visits and medical details</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <div id="error-message" class="error" style="display: none;"></div>
+            <div id="success-message" class="success" style="display: none;"></div>
+            
+            <form id="consultation-form">
+                <div class="form-group">
+                    <label for="consultation-id">Consultation ID (CI followed by 4 digits)</label>
+                    <input type="text" id="consultation-id" pattern="CI\d{4}" required placeholder="CI0001">
+                </div>
+                
+                <div class="form-group">
+                    <label for="date-of-consultation">Date of Consultation</label>
+                    <input type="date" id="date-of-consultation" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="patient-id">Patient ID</label>
+                    <input type="text" id="patient-id" pattern="PN\d{4}" required placeholder="PN0001">
+                </div>
+                
+                <div class="form-group">
+                    <label for="doctor-id">Doctor ID (DI followed by 3 digits)</label>
+                    <input type="text" id="doctor-id" pattern="DI\d{3}" required placeholder="DI001">
+                </div>
+                
+                <div class="form-group">
+                    <label for="diagnosis">Diagnosis</label>
+                    <textarea id="diagnosis" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="prescribed-medication">Prescribed Medication (if any)</label>
+                    <textarea id="prescribed-medication" rows="2"></textarea>
+                </div>
+                
+                <button type="submit">Record Consultation</button>
+            </form>
+            
+            <div style="margin-top: 20px;">
+                <a href="/index.html" class="menu-item">Back to Main Menu</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>School of Information System | Diploma in Information Technology Level 6</p>
+            <p>IS6423 Software Development Methods - Assignment 1</p>
+        </div>
+    </footer>
+</body>
+</html>
